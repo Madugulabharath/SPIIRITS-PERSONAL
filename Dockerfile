@@ -1,11 +1,23 @@
-# Use Tomcat 10 with JDK 17
+# Stage 1: Build WAR with Maven
+FROM maven:3.9.1-eclipse-temurin-17 AS build
+
+# Copy pom.xml and source code
+COPY pom.xml /app/
+COPY src /app/src
+COPY WebContent /app/WebContent
+
+WORKDIR /app
+
+# Build the WAR file
+RUN mvn clean package
+
+# Stage 2: Run WAR with Tomcat
 FROM tomcat:10.1-jdk17
 
-# Copy your WAR file from target folder (Maven output)
-COPY target/SpiritsNew.war /usr/local/tomcat/webapps/SpiritsNew.war
+# Copy WAR from build stage
+COPY --from=build /app/target/SpiritsNew.war /usr/local/tomcat/webapps/SpiritsNew.war
 
-# Expose the default Tomcat port
 EXPOSE 8080
 
-# Start Tomcat when the container runs
+# Start Tomcat
 CMD ["catalina.sh", "run"]
