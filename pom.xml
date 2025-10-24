@@ -17,7 +17,7 @@
   </properties>
 
   <dependencies>
-    <!-- ✅ Servlet API (Provided by Tomcat during runtime) -->
+    <!-- Servlet API (provided by Tomcat) -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
@@ -25,7 +25,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- ✅ JSP API -->
+    <!-- JSP API -->
     <dependency>
       <groupId>jakarta.servlet.jsp</groupId>
       <artifactId>jakarta.servlet.jsp-api</artifactId>
@@ -33,7 +33,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- ✅ JSTL (optional, if you use JSTL tags in JSP) -->
+    <!-- JSTL (if you use JSTL tags) -->
     <dependency>
       <groupId>jakarta.servlet.jsp.jstl</groupId>
       <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
@@ -45,19 +45,17 @@
       <version>2.0.0</version>
     </dependency>
 
-    <!-- ✅ MySQL Connector -->
+    <!-- MySQL connector -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-j</artifactId>
       <version>8.0.33</version>
     </dependency>
-
   </dependencies>
 
   <build>
     <finalName>SpiritsNew</finalName>
     <plugins>
-      <!-- Compiler plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -68,7 +66,6 @@
         </configuration>
       </plugin>
 
-      <!-- WAR plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
