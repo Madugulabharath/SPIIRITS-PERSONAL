@@ -17,12 +17,12 @@ public class LoginBAD extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     // Replace these with your cloud database credentials
-//    private static final String DB_URL = "jdbc:mysql://<DB_HOST>:<DB_PORT>/<DB_NAME>";
-//    private static final String DB_USER = "<DB_USER>";
-//    private static final String DB_PASSWORD = "<DB_PASSWORD>";
     private static final String DB_URL = "jdbc:mysql://<DB_HOST>:<DB_PORT>/<DB_NAME>";
     private static final String DB_USER = "<DB_USER>";
     private static final String DB_PASSWORD = "<DB_PASSWORD>";
+//    private static final String DB_URL = "jdbc:mysql://<DB_HOST>:<DB_PORT>/<DB_NAME>";
+//    private static final String DB_USER = "<DB_USER>";
+//    private static final String DB_PASSWORD = "<DB_PASSWORD>";
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
