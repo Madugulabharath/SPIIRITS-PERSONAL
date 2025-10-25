@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -17,7 +18,7 @@
   </properties>
 
   <dependencies>
-    <!-- ✅ Servlet API (Provided by Tomcat during runtime) -->
+    <!-- Servlet API (provided by Tomcat) -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
@@ -25,7 +26,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- ✅ JSP API -->
+    <!-- JSP API -->
     <dependency>
       <groupId>jakarta.servlet.jsp</groupId>
       <artifactId>jakarta.servlet.jsp-api</artifactId>
@@ -33,7 +34,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- ✅ JSTL (optional, if you use JSTL tags in JSP) -->
+    <!-- JSTL -->
     <dependency>
       <groupId>jakarta.servlet.jsp.jstl</groupId>
       <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
@@ -43,19 +44,20 @@
       <groupId>org.glassfish.web</groupId>
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
       <version>2.0.0</version>
+      <scope>runtime</scope>
     </dependency>
 
-    <!-- ✅ MySQL Connector -->
+    <!-- MySQL Connector -->
     <dependency>
       <groupId>mysql</groupId>
-      <artifactId>mysql-connector-j</artifactId>
+      <artifactId>mysql-connector-java</artifactId>
       <version>8.0.33</version>
     </dependency>
-
   </dependencies>
 
   <build>
-    <finalName>SpiritsNew</finalName>
+    <finalName>ROOT</finalName>
+
     <plugins>
       <!-- Compiler plugin -->
       <plugin>

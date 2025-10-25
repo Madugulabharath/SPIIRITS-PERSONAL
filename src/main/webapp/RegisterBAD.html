@@ -56,27 +56,18 @@
 </head>
 <body>
 
-    <form action="/LoginForm/RegisterBAD" method="post">
-        <h2>User Registration</h2>
-        <hr>
-        <!-- <label for="username">Name:</label> -->
-        <input type="text" id="username" name="username" required placeholder="enter your  N A M E">
+<form action="RegisterBAD" method="post">
+    <h2>User Registration</h2>
+    <hr>
+    <input type="text" id="username" name="username" required placeholder="Enter your NAME">
+    <input type="email" id="email" name="email" required placeholder="Enter your EMAIL">
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit MOBILE NUMBER">
+    <input type="password" id="password" name="password" required placeholder="SET PASSWORD">
+    <input type="submit" value="REGISTER">
+    <br>
+    <a href="LoginBAD.html">Already have an account? Login now</a>
+</form>
 
-        <!-- <label for="email">Email:</label> -->
-        <input type="email" id="email" name="email" required placeholder="enter your E M A I L">
-
-        
-
-        <!-- <label for="phone">Phone Number:</label> -->
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit  M O B I L E- N U M B E R">
-        <!-- <label for="password">Password:</label> -->
-        <input type="password" id="password" name="password" required placeholder="S E T - P A S S W O R D">
-
-        <input type="submit" value="R E G I S T E R">
-        <br>
-        <a href="LoginBAD.html">already have account? login now </a>
-        
-    </form>
 
 </body>
 </html>
